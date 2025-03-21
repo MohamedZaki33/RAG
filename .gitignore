@@ -1,0 +1,33 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore Virtual Environment
+venv/
+env/
+
+# Ignore Editor and IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Ignore Django Database (Only for SQLite, not needed for PostgreSQL)
+# db.sqlite3
+
+# Ignore Secrets & Configs
+.env
+*.log
+config.json
+
+# Ignore Migrations Cache (Optional: Keeps migrations clean)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+**/migrations/*.py
+
+# Ignore Static and Media Files (If generated dynamically)
+staticfiles/
+media/
+
+# Ignore Docker and Deployment Files (If applicable)
+docker-compose.override.yml
+

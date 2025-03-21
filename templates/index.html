@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3>RAG Document Question Answering</h3>
+            </div>
+            <div class="card-body">
+                <p>Upload a PDF document and ask questions about its content using the power of Retrieval-Augmented
+                    Generation.</p>
+                <a href="{% url 'upload_document' %}" class="btn btn-primary">Upload New Document</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if documents %}
+<div class="row mt-4">
+    <div class="col-md-12">
+        <h3>Your Documents</h3>
+        <div class="list-group">
+            {% for document in documents %}
+            <div class="list-group-item">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ document.title }}</h5>
+                    <small>Uploaded: {{ document.uploaded_at|date:"M d, Y" }}</small>
+                </div>
+                <p class="mb-1">File: {{ document.file.name }}</p>
+
+                <form method="post" action="{% url 'query_document' %}" class="mt-3">
+                    {% csrf_token %}
+                    <input type="hidden" name="document_id" value="{{ document.id }}">
+                    <div class="input-group">
+                        <input type="text" name="question" class="form-control"
+                               placeholder="Ask a question about this document" required>
+                        <button type="submit" class="btn btn-primary">Ask</button>
+                    </div>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
