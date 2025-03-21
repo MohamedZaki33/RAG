@@ -1,7 +1,7 @@
-langchain-text-splitters>=0.0.2
-langchain-community>=0.0.20
-langchain-core>=0.1.35
-langchain-huggingface>=0.0.3
+langchain-text-splitters==0.0.1
+langchain-community==0.0.20
+langchain-core==0.1.35
+langchain-huggingface==0.0.3
 langgraph>=0.0.22
 bs4==0.0.1
 django==4.2.7
