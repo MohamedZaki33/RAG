@@ -4,7 +4,7 @@ langchain-core
 langchain-huggingface
 langchain-text-splitters
 langchain-groq
-langgraph==
+langgraph
 
 # Machine Learning & NLP
 sentence-transformers==2.2.2
