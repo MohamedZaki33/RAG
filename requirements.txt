@@ -1,11 +1,23 @@
-langchain-text-splitters==0.0.1
+# LangChain and related dependencies
 langchain-community==0.0.10
 langchain-core==0.1.27
 langchain-huggingface==0.0.2
+langchain-text-splitters
+langchain-groq
 langgraph==0.0.10
-bs4==0.0.1
-django==4.2.7
+
+# Machine Learning & NLP
 sentence-transformers==2.2.2
-typing-extensions==4.9.0
-numpy<2
+numpy==1.26.4  # Explicitly specifying version
+
+# Django and Database
+django==4.2.7
 psycopg2
+
+# Web Scraping
+beautifulsoup4
+bs4==0.0.1
+
+# Utilities
+typing-extensions==4.9.0
+pypdf
