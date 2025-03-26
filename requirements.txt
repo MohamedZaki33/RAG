@@ -1,10 +1,10 @@
 # LangChain and related dependencies
-langchain-community
-langchain-core
-langchain-huggingface
-langchain-text-splitters
 langchain-groq
-langgraph
+langchain-community==0.0.28
+langchain-core==0.3.15
+langchain-huggingface==0.1.2
+langchain-text-splitters==0.0.1
+langgraph==0.0.12
 
 # Machine Learning & NLP
 sentence-transformers==2.2.2
